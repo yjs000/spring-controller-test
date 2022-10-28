@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     hello
 </body>
+
+<script>
+    //post에는 전부 resposnebody를 달아줘야함
+    
+    //왜 @RequstParam없이 VO는 바로 받아지고 HashMap은 안됨? //이름이 정의되지 않아서
+
+
+
+    fetch('/test6?name=hello.html' ,{
+            method: "GET",
+        }).then(res => {
+            console.log(res)
+            return res.text();
+        }).then(text => console.log(text));
+
+</script>
+
 </html>
